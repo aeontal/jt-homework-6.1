@@ -20,40 +20,40 @@ class StatsServiceTest {
 
     @Test
     void shouldCalculateAvSumStat() {
-        long aver_sum = service.avSumStat(purchases);
+        long averSum = service.avSumStat(purchases);
         long expected = 15;
-        assertEquals(aver_sum, expected);
+        assertEquals(averSum, expected);
     }
 
     @Test
     void shouldCalculateMaxStat() {
-        long max_number = service.maxStat(purchases);
+        long maxNumber = service.maxStat(purchases);
         long expected = 5;
-        assertEquals(max_number, expected);
+        assertEquals(maxNumber, expected);
     }
 
     @Test
     void shouldCalculateMinStat() {
-        long min_number = service.minStat(purchases);
+        long minNumber = service.minStat(purchases);
         long expected = 8;
-        assertEquals(min_number, expected);
+        assertEquals(minNumber, expected);
 
     }
 
     @Test
     void shouldCalculateAmountBelowAverage() {
-        long aver_sum = 15;
-        long amount_min = service.amountBelowAverage(purchases, aver_sum);
+        long averSum = 15;
+        long amountMin = service.amountBelowAverage(purchases, averSum);
         long expected = 5;
-        assertEquals(amount_min, expected);
+        assertEquals(amountMin, expected);
     }
 
     @Test
     void shouldCalculateAmountAboveAverage() {
-        long aver_sum = 15;
-        long amount_max = service.amountBelowAverage(purchases, aver_sum);
+        long averSum = 15;
+        long amountMax = service.amountBelowAverage(purchases, averSum);
         long expected = 5;
-        assertEquals(amount_max, expected);
+        assertEquals(amountMax, expected);
 
     }
 }
