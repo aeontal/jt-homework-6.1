@@ -1,4 +1,4 @@
-### StatsService[![Java CI with Maven](https://github.com/aeontal/jt-homework-6.1/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/aeontal/jt-homework-6.1/actions/workflows/maven.yml)
+### StatsService [![Java CI with Maven](https://github.com/aeontal/jt-homework-6.1/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/aeontal/jt-homework-6.1/actions/workflows/maven.yml)
 
 ### Задача
 
