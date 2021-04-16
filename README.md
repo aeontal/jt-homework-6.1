@@ -1,4 +1,4 @@
-### StatsManager [![Java CI](https://github.com/aeontal/j-oop-homework-6.1/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/aeontal/j-oop-homework-6.1/actions/workflows/maven.yml)
+### StatsManager [![Java CI with Maven](https://github.com/aeontal/jt-homework-6.1/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/aeontal/jt-homework-6.1/actions/workflows/maven.yml)
 
 ### Задача
 
