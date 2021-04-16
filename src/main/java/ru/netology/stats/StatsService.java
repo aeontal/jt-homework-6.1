@@ -1,17 +1,14 @@
 package ru.netology.stats;
-
-
 public class StatsService {
 
     public static void main(String[] args) {
-        //long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long[] purchases = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long sum = sumStat(purchases);
         long averSum = avSumStat(purchases);
         long maxNumber = maxStat(purchases);
         long minNumber = minStat(purchases);
-        long amountMin = amountBelowAverage(purchases, averSum);
-        long amountMax = amountAboveAverage(purchases, averSum);
+        long amountMin = amountBelowAverage(purchases);
+        long amountMax = amountAboveAverage(purchases);
 
 
         System.out.println(sum);
@@ -25,18 +22,15 @@ public class StatsService {
 
     public static long sumStat(long[] purchases) {
         long sum = 0;
-        for (long purchase : purchases) {
-            sum += purchase;
+        for(int i = 0; i < purchases.length; i++){
+            sum += purchases[i];
         }
         return sum;
     }
 
     public static long avSumStat(long[] purchases) {
-        long sum = 0;
-        for (long purchase : purchases) {
-            sum += purchase;
-        }
-        long averSum = sum / purchases.length;
+
+        long averSum = sumStat(purchases) / purchases.length;
         return averSum;
     }
 
@@ -44,7 +38,7 @@ public class StatsService {
         long currentMax = purchases[0];
         int maxNumber = 0;
         for (int i = 0; i < purchases.length; ++i) {
-            if (purchases[i] > currentMax) {
+            if (purchases[i] >= currentMax) {
                 currentMax = purchases[i];
                 maxNumber = i;
             }
@@ -52,11 +46,13 @@ public class StatsService {
         return maxNumber;
     }
 
+
+
     public static long minStat(long[] purchases) {
         long currentMin = purchases[0];
         int minNumber = 0;
         for (int i = 0; i < purchases.length; ++i) {
-            if (purchases[i] < currentMin) {
+            if (purchases[i] <= currentMin) {
                 currentMin = purchases[i];
                 minNumber = i;
             }
@@ -64,7 +60,9 @@ public class StatsService {
         return minNumber;
     }
 
-    public static long amountBelowAverage(long[] purchases, long averSum) {
+
+    public static long amountBelowAverage(long[] purchases) {
+        long averSum=avSumStat(purchases);
         long amountMin = 0;
         for (int i = 0; i < purchases.length; ++i) {
             if (averSum < purchases[i]) {
@@ -75,7 +73,8 @@ public class StatsService {
 
     }
 
-    public static long amountAboveAverage(long[] purchases, long averSum) {
+    public static long amountAboveAverage(long[] purchases) {
+        long averSum=avSumStat(purchases);
         long amountMax = 0;
         for (int i = 0; i < purchases.length; ++i) {
             if (averSum > purchases[i]) {
